@@ -17,5 +17,5 @@ phases:
   post_build:
     commands:
       - echo PostBuild Phase
-      - aws s3 sync ./dist s3://tester403
+      - aws s3 sync .dist s3://tester403
       - aws cloudfront create-invalidation --distribution-id E2V33APWSQZ5SX --paths "/*";
